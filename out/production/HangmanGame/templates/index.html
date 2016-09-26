@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hangman</title>
+</head>
+<body>
+<h2><b>Hangman</b></h2>
+<hr/>
+{{hangman}}<br/>
+{{statement}}<br/><br/>
+
+<div class="hangman" style="margin-left: 50px;">
+    &nbsp;{{hang0}}<br/>
+    &nbsp;{{#hang1}}{{.}}{{/hang1}}<br/>
+    {{#hang3}}{{.}}{{/hang3}}{{^hang3}}&nbsp;{{/hang3}}{{#hang2}}{{.}}{{/hang2}}{{#hang4}}{{.}}{{/hang4}}<br/>
+    &nbsp;{{#hang5}}{{.}}{{/hang5}}<br/>
+    {{#hang6}}{{.}}{{/hang6}}&nbsp;{{#hang7}}{{.}}{{/hang7}}<br/><br/>
+</div>
+
+{{word}}<br/><br/>
+<form action="/guess" method="post">
+    Enter your guess:&nbsp;<input name="guess"/>&nbsp;<button type="submit">Submit</button>
+</form>
+</body>
+</html>
